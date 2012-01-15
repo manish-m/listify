@@ -1,0 +1,30 @@
+<h1>Listing list_records</h1>
+
+<table>
+  <tr>
+    <th>Table name</th>
+    <th>Fields</th>
+    <th>Connection</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @list_records.each do |list_record| %>
+  <tr>
+    <td><%= list_record.table_name %></td>
+    <td><%= list_record.fields %></td>
+    <td><%= list_record.connection_id %></td>
+    <td><%= list_record.user_id %></td>
+    <td><%= link_to 'Show', list_record %></td>
+    <td><%= link_to 'Edit', edit_list_record_path(list_record) %></td>
+    <td><%= link_to 'Destroy', list_record, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Record/View', new_list_record_path %>
+<%= link_to 'Home', root_path %>

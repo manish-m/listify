@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  table_name: 
+  fields: 
+  connection_id:
+  user_id: 1
+
+two:
+  table_name: 
+  fields: 
+  connection_id:
+  user_id: 1

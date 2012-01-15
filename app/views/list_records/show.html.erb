@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Table name:</b>
+  <%= @list_record.table_name %>
+</p>
+
+<p>
+  <b>Fields:</b>
+  <%= @list_record.fields %>
+</p>
+
+<p>
+  <b>Connection:</b>
+  <%= @list_record.connection_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @list_record.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_list_record_path(@list_record) %> |
+<%= link_to 'Back', list_records_path %>

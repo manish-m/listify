@@ -1,0 +1,35 @@
+<%= form_for(@list_record) do |f| %>
+  <% if @list_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@list_record.errors.count, "error") %> prohibited this list_record from being saved:</h2>
+
+      <ul>
+      <% @list_record.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :table_name %><br />
+    <%= f.text_field :table_name %>
+  </div>
+  <div class="field">
+    <%= f.label :fields %><br />
+    <%= f.text_field :fields %>
+  </div>
+  <div class="field">
+    <% c = Hash.new %>
+    <% Database_Connection.where(:user_id => 1).each{|x| c.merge!(x.database => x.id)} %>
+    <%= f.label :connection_id %><br />
+    <%= f.select :connection_id, c %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.label session[:user] %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

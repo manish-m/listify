@@ -1,0 +1,37 @@
+<%= form_for(@connection, :url => connections_path(@connection)) do |f| %>
+  <% if @connection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@connection.errors.count, "error") %> prohibited this connection from being saved:</h2>
+
+      <ul>
+      <% @connection.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :adapter %><br />
+    <%= f.select :adapter, ['mssql','mysql','postgresql', 'sqlite3'] %>
+  </div>
+  <div class="field">
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :database %><br />
+    <%= f.text_field :database %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

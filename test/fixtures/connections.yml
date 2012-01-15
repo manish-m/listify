@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  adapter: 
+  host: 
+  username: 
+  password: 
+  database: MyString
+
+two:
+  adapter: 
+  host: 
+  username: 
+  password: 
+  database: MyString

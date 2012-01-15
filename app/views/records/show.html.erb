@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Table name:</b>
+  <%= @table_name %>
+</p>
+
+<p>
+  <b>Fields:</b>
+  <%= @record.first.inspect %>
+</p>
+
+
+<!--<= link_to 'Edit', edit_record_path(@record) %> |-->
+<%= link_to 'Back', records_path %>

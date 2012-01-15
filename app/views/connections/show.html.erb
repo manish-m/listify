@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Adapter:</b>
+  <%= @connection.adapter %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @connection.host %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @connection.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @connection.password %>
+</p>
+
+<p>
+  <b>Database:</b>
+  <%= @connection.database %>
+</p>
+
+
+<%= link_to 'Edit', edit_connection_path(@connection) %> |
+<%= link_to 'Back', connections_path %>
